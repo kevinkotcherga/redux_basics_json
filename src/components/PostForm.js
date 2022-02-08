@@ -24,7 +24,7 @@ const PostForm = () => {
       setContent('');
       dispatch(getPosts());
     }
-  }
+  };
 
   return (
     <div className="form-container">
