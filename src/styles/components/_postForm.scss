@@ -1,6 +1,14 @@
 .form-container {
-  border: 1px solid $color-2;
-  margin: 20px 0 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  background: none;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  padding: 40px;
+  margin: 20px 0;
   width: 50%;
   max-width: 500px;
 
