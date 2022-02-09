@@ -8,7 +8,7 @@
   border-top: 1px solid rgba(255,255,255,0.5);
   border-left: 1px solid rgba(255,255,255,0.5);
   padding: 40px;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
   margin-top: 80px;
 
@@ -17,12 +17,19 @@
     flex-direction: column;
     padding: 25px;
 
+    .submit {
+      width: 100%;
+      cursor: pointer;
+    }
+
     input,
     textarea {
       border: 1px solid $color-4;
+      border-radius: 10px;
       font-family: "Amiri", serif;
       padding: 5px 10px;
       resize: none;
+      margin: 10px 0;
     }
 
     input[type="text"],

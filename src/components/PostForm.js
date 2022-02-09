@@ -31,7 +31,7 @@ const PostForm = () => {
       <form onSubmit={(e) => handleForm(e)}>
         <input type="text" placeholder="Titre du poste" value={title} onChange={(e) => setTitle(e.target.value)}/>
         <textarea placeholder="Postez vos pensées..." value={content} onChange={(e)=> setContent(e.target.value)}></textarea>
-        <input type="submit" value="Envoyer" />
+        <input className="submit" type="submit" value="Envoyer" />
       </form>
     </div>
   );
