@@ -8,7 +8,7 @@ export const ADD_LIKE = "ADD_LIKE";
 
 export const getPosts = () => {
   return (dispatch) => {
-    return axios.get('http://localhost:3000/posts?_sort=id&_order=desc').then((res) => {
+    return axios.get('https://redux-app-crud-kotcherga.herokuapp.com/api/posts?_sort=id&_order=desc').then((res) => {
       dispatch({ type: GET_POSTS, payload: res.data})
     })
     .catch((err) => console.log(err))
@@ -17,7 +17,7 @@ export const getPosts = () => {
 
 export const addPost = (data) => {
   return (dispatch) => {
-    return axios.post('http://localhost:3000/posts', data).then((res) => {
+    return axios.post('https://redux-app-crud-kotcherga.herokuapp.com/api/posts', data).then((res) => {
       dispatch({ type: ADD_POSTS, payload: data})
     })
     .catch((err) => console.log(err))
@@ -28,7 +28,7 @@ export const editPost = (data) => {
   return (dispatch) => {
     return axios({
       method: "put",
-      url: `http://localhost:3000/posts/${data.id}`,
+      url: `https://redux-app-crud-kotcherga.herokuapp.com/api/posts/${data.id}`,
       data: { ...data }
     })
     .then((res) => {
@@ -42,7 +42,7 @@ export const deletePost = (postId) => {
   return (dispatch) => {
     return axios({
       method: "delete",
-      url: `http://localhost:3000/posts/${postId}`,
+      url: `https://redux-app-crud-kotcherga.herokuapp.com/api/posts/${postId}`,
     })
     .then((res) => {
       dispatch({ type: DELETE_POST, payload: { postId }})
@@ -55,7 +55,7 @@ export const addLike = (data) => {
   return (dispatch) => {
     return axios({
       method: "put",
-      url: `http://localhost:3000/posts/${data.id}`,
+      url: `https://redux-app-crud-kotcherga.herokuapp.com/api/posts/${data.id}`,
       data: { ...data }
     })
     .then((res) => {
